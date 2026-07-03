@@ -32,6 +32,7 @@ A = np.array([[1,1,1],[1,a**2,a],[1,a,a**2]])
 A_inv = (1/3) * np.conj(A)
 
 Va = 220 + 0j
+
 Vb = 150 * np.exp(1j*np.deg2rad(-130))
 Vc = 180 * np.exp(1j*np.deg2rad(115))
 
