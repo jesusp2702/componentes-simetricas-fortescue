@@ -12,14 +12,14 @@ Implementación en Python de la transformación de componentes simétricas (secu
 La transformación de Fortescue relaciona las magnitudes de fase con sus componentes simétricas mediante:
 
 $$
-\begin{bmatrix} V_a \\ V_b \\ V_c \end{bmatrix} = A \begin{bmatrix} V_a^{(0)} \\ V_a^{(1)} \\ V_a^{(2)} \end{bmatrix}, \qquad
-A = \begin{bmatrix} 1&1&1 \\ 1&a^2&a \\ 1&a&a^2 \end{bmatrix}, \quad a = 1\angle120^\circ
+\begin{bmatrix} V_a \\\\ V_b \\\\ V_c \end{bmatrix} = A \begin{bmatrix} V_a^{(0)} \\\\ V_a^{(1)} \\\\ V_a^{(2)} \end{bmatrix}, \qquad
+A = \begin{bmatrix} 1&1&1 \\\\ 1&a^2&a \\\\ 1&a&a^2 \end{bmatrix}, \quad a = 1\angle120^\circ
 $$
 
 Se demuestra que $A^{-1} = \frac{1}{3}A^*$ (ver [`demostracion.md`](./demostracion.md) para la derivación completa), lo cual permite obtener las componentes simétricas sin recurrir a inversión matricial genérica:
 
 $$
-\begin{bmatrix} V_a^{(0)} \\ V_a^{(1)} \\ V_a^{(2)} \end{bmatrix} = \frac{1}{3}\begin{bmatrix} 1&1&1 \\ 1&a&a^2 \\ 1&a^2&a \end{bmatrix}\begin{bmatrix} V_a \\ V_b \\ V_c \end{bmatrix}
+\begin{bmatrix} V_a^{(0)} \\\\ V_a^{(1)} \\\\ V_a^{(2)} \end{bmatrix} = \frac{1}{3}\begin{bmatrix} 1&1&1 \\\\ 1&a&a^2 \\\\ 1&a^2&a \end{bmatrix}\begin{bmatrix} V_a \\\\ V_b \\\\ V_c \end{bmatrix}
 $$
 
 ## Uso
@@ -32,7 +32,6 @@ A = np.array([[1,1,1],[1,a**2,a],[1,a,a**2]])
 A_inv = (1/3) * np.conj(A)
 
 Va = 220 + 0j
-
 Vb = 150 * np.exp(1j*np.deg2rad(-130))
 Vc = 180 * np.exp(1j*np.deg2rad(115))
 
