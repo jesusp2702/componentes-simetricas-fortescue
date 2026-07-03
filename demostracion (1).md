@@ -5,13 +5,13 @@
 Sea la matriz de transformación de componentes simétricas:
 
 $$
-A = \begin{bmatrix} 1 & 1 & 1 \\ 1 & a^2 & a \\ 1 & a & a^2 \end{bmatrix}, \qquad a = 1\angle 120^\circ = e^{j2\pi/3}
+A = \begin{bmatrix} 1 & 1 & 1 \\\\ 1 & a^2 & a \\\\ 1 & a & a^2 \end{bmatrix}, \qquad a = 1\angle 120^\circ = e^{j2\pi/3}
 $$
 
 tal que:
 
 $$
-\begin{bmatrix} V_a \\ V_b \\ V_c \end{bmatrix} = A \begin{bmatrix} V_a^{(0)} \\ V_a^{(1)} \\ V_a^{(2)} \end{bmatrix}
+\begin{bmatrix} V_a \\\\ V_b \\\\ V_c \end{bmatrix} = A \begin{bmatrix} V_a^{(0)} \\\\ V_a^{(1)} \\\\ V_a^{(2)} \end{bmatrix}
 $$
 
 Buscamos $A^{-1}$, definida por $A \cdot A^{-1} = I$.
@@ -35,7 +35,7 @@ $$
 Se propone $A \cdot A^* = I$, donde $A^*$ es la matriz conjugada de $A$:
 
 $$
-A^* = \begin{bmatrix} 1 & 1 & 1 \\ 1 & a & a^2 \\ 1 & a^2 & a \end{bmatrix}
+A^* = \begin{bmatrix} 1 & 1 & 1 \\\\ 1 & a & a^2 \\\\ 1 & a^2 & a \end{bmatrix}
 $$
 
 Multiplicando fila por columna, $I_{ij} = \sum_k A_{ik} \, A^*_{kj}$:
@@ -77,7 +77,7 @@ $$
 ## Paso 3: Resultado
 
 $$
-A \cdot A^* = \begin{bmatrix} 3&0&0 \\ 0&3&0 \\ 0&0&3 \end{bmatrix} = 3I
+A \cdot A^* = \begin{bmatrix} 3&0&0 \\\\ 0&3&0 \\\\ 0&0&3 \end{bmatrix} = 3I
 $$
 
 ## Paso 4: Despeje de la inversa
@@ -97,7 +97,7 @@ $$
 ## Aplicación: componentes simétricas
 
 $$
-\begin{bmatrix} V_a^{(0)} \\ V_a^{(1)} \\ V_a^{(2)} \end{bmatrix} = \frac{1}{3}\begin{bmatrix} 1&1&1 \\ 1&a&a^2 \\ 1&a^2&a \end{bmatrix}\begin{bmatrix} V_a \\ V_b \\ V_c \end{bmatrix}
+\begin{bmatrix} V_a^{(0)} \\\\ V_a^{(1)} \\\\ V_a^{(2)} \end{bmatrix} = \frac{1}{3}\begin{bmatrix} 1&1&1 \\\\ 1&a&a^2 \\\\ 1&a^2&a \end{bmatrix}\begin{bmatrix} V_a \\\\ V_b \\\\ V_c \end{bmatrix}
 $$
 
 $$
